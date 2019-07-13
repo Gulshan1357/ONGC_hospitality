@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ONGCEntityFrameworkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FormDetails">
+          <Key>
+            <PropertyRef Name="FormId" />
+          </Key>
+          <Property Name="FormId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EventN" Type="varchar" MaxLength="255" />
+          <Property Name="Department" Type="varchar" MaxLength="255" />
+          <Property Name="Venue" Type="varchar" MaxLength="255" />
+          <Property Name="EventDate" Type="varchar" MaxLength="100" />
+          <Property Name="LightRefreshment" Type="int" />
+          <Property Name="HighTea" Type="int" />
+          <Property Name="LunchWLv" Type="int" />
+          <Property Name="LunchWLnv" Type="int" />
+          <Property Name="LunchSv" Type="int" />
+          <Property Name="LunchSnv" Type="int" />
+          <Property Name="LunchVIPv" Type="int" />
+          <Property Name="LunchVIPnv" Type="int" />
+          <Property Name="LunchVVIPv" Type="int" />
+          <Property Name="LunchVVIPnv" Type="int" />
+          <Property Name="DinnerSv" Type="int" />
+          <Property Name="DinnerSnv" Type="int" />
+          <Property Name="DinnerVIPv" Type="int" />
+          <Property Name="DinnerVIPnv" Type="int" />
+          <Property Name="DinnerVVIPv" Type="int" />
+          <Property Name="DinnerVVIPnv" Type="int" />
+          <Property Name="MinWater" Type="int" />
+          <Property Name="ByEmpID" Type="int" />
+          <Property Name="ToEmpID" Type="int" />
+        </EntityType>
+        <EntityType Name="FormStatus">
+          <Key>
+            <PropertyRef Name="SerialNo" />
+          </Key>
+          <Property Name="SerialNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FormId" Type="int" Nullable="false" />
+          <Property Name="ByEmpID" Type="int" />
+          <Property Name="ToEmpID" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EventDate" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="LoginTable">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="255" />
+          <Property Name="Pass" Type="varchar" MaxLength="225" Nullable="false" />
+          <Property Name="Designation" Type="varchar" MaxLength="225" />
+        </EntityType>
+        <EntityContainer Name="ONGCEntityFrameworkModelStoreContainer">
+          <EntitySet Name="FormDetails" EntityType="Self.FormDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FormStatus" EntityType="Self.FormStatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoginTable" EntityType="Self.LoginTable" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ONGCEntityFrameworkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FormDetail">
+          <Key>
+            <PropertyRef Name="FormId" />
+          </Key>
+          <Property Name="FormId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Venue" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="EventDate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LightRefreshment" Type="Int32" />
+          <Property Name="HighTea" Type="Int32" />
+          <Property Name="LunchWLv" Type="Int32" />
+          <Property Name="LunchWLnv" Type="Int32" />
+          <Property Name="LunchSv" Type="Int32" />
+          <Property Name="LunchSnv" Type="Int32" />
+          <Property Name="LunchVIPv" Type="Int32" />
+          <Property Name="LunchVIPnv" Type="Int32" />
+          <Property Name="LunchVVIPv" Type="Int32" />
+          <Property Name="LunchVVIPnv" Type="Int32" />
+          <Property Name="DinnerSv" Type="Int32" />
+          <Property Name="DinnerSnv" Type="Int32" />
+          <Property Name="DinnerVIPv" Type="Int32" />
+          <Property Name="DinnerVIPnv" Type="Int32" />
+          <Property Name="DinnerVVIPv" Type="Int32" />
+          <Property Name="DinnerVVIPnv" Type="Int32" />
+          <Property Name="MinWater" Type="Int32" />
+          <Property Name="ByEmpID" Type="Int32" />
+          <Property Name="ToEmpID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="FormStatus">
+          <Key>
+            <PropertyRef Name="SerialNo" />
+          </Key>
+          <Property Name="SerialNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FormId" Type="Int32" Nullable="false" />
+          <Property Name="ByEmpID" Type="Int32" />
+          <Property Name="ToEmpID" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="EventDate" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LoginTable">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="EmployeeID" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Pass" Type="String" MaxLength="225" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Designation" Type="String" MaxLength="225" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="ONGCEntityFramework" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FormDetails" EntityType="Self.FormDetail" />
+          <EntitySet Name="FormStatus1" EntityType="ONGCEntityFrameworkModel.FormStatus" />
+          <EntitySet Name="LoginTables" EntityType="Self.LoginTable" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ONGCEntityFrameworkModelStoreContainer" CdmEntityContainer="ONGCEntityFramework">
+          <EntitySetMapping Name="FormDetails">
+            <EntityTypeMapping TypeName="ONGCEntityFrameworkModel.FormDetail">
+              <MappingFragment StoreEntitySet="FormDetails">
+                <ScalarProperty Name="FormId" ColumnName="FormId" />
+                <ScalarProperty Name="EventN" ColumnName="EventN" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Venue" ColumnName="Venue" />
+                <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+                <ScalarProperty Name="LightRefreshment" ColumnName="LightRefreshment" />
+                <ScalarProperty Name="HighTea" ColumnName="HighTea" />
+                <ScalarProperty Name="LunchWLv" ColumnName="LunchWLv" />
+                <ScalarProperty Name="LunchWLnv" ColumnName="LunchWLnv" />
+                <ScalarProperty Name="LunchSv" ColumnName="LunchSv" />
+                <ScalarProperty Name="LunchSnv" ColumnName="LunchSnv" />
+                <ScalarProperty Name="LunchVIPv" ColumnName="LunchVIPv" />
+                <ScalarProperty Name="LunchVIPnv" ColumnName="LunchVIPnv" />
+                <ScalarProperty Name="LunchVVIPv" ColumnName="LunchVVIPv" />
+                <ScalarProperty Name="LunchVVIPnv" ColumnName="LunchVVIPnv" />
+                <ScalarProperty Name="DinnerSv" ColumnName="DinnerSv" />
+                <ScalarProperty Name="DinnerSnv" ColumnName="DinnerSnv" />
+                <ScalarProperty Name="DinnerVIPv" ColumnName="DinnerVIPv" />
+                <ScalarProperty Name="DinnerVIPnv" ColumnName="DinnerVIPnv" />
+                <ScalarProperty Name="DinnerVVIPv" ColumnName="DinnerVVIPv" />
+                <ScalarProperty Name="DinnerVVIPnv" ColumnName="DinnerVVIPnv" />
+                <ScalarProperty Name="MinWater" ColumnName="MinWater" />
+                <ScalarProperty Name="ByEmpID" ColumnName="ByEmpID" />
+                <ScalarProperty Name="ToEmpID" ColumnName="ToEmpID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormStatus1">
+            <EntityTypeMapping TypeName="ONGCEntityFrameworkModel.FormStatus">
+              <MappingFragment StoreEntitySet="FormStatus">
+                <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+                <ScalarProperty Name="FormId" ColumnName="FormId" />
+                <ScalarProperty Name="ByEmpID" ColumnName="ByEmpID" />
+                <ScalarProperty Name="ToEmpID" ColumnName="ToEmpID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EventDate" ColumnName="EventDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoginTables">
+            <EntityTypeMapping TypeName="ONGCEntityFrameworkModel.LoginTable">
+              <MappingFragment StoreEntitySet="LoginTable">
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
