@@ -23,7 +23,7 @@ Centralized Hospitality Web App which keeps a note of every hospitality events, 
 **Login Page**
 In this module we connected the login table of our database to this webpage so that users can
 access the website only if they provide correct password.
-![alt text](https://github.com/Gulshan1357/ONGC_hospitality/blob/ONGC_hospitality/Images/Login1.jpg?raw=true)
+![alt text](https://github.com/Gulshan1357/ONGC_hospitality/ONGC_hospitality/Images/Login1.jpg?raw=true)
 
 **Home Module**
 This module this a basic welcoming page which provides basic user details.
