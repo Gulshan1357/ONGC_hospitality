@@ -24,20 +24,20 @@ Centralized Hospitality Web App which keeps a note of every hospitality events, 
 In this module we connected the login table of our database to this webpage so that users can
 access the website only if they provide correct password.
 ONGC_hospitality/Images/Login1.jpg
-![alt text](/ONGC_hospitality/Images/Login1.jpg?raw=true)
+![Login Page Image](/ONGC_hospitality/Images/Login1.jpg?raw=true)
 
 **Home Module**
 This module this a basic welcoming page which provides basic user details.
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Login Page Image](/ONGC_hospitality/Images/Home2.jpg?raw=true)
 
 **Fill-Form Module**
 This page is used to fill the form which includes the event and item requirement details.
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Login Page Image](/ONGC_hospitality/Images/FF3.jpg?raw=true)
+![Login Page Image](/ONGC_hospitality/Images/FF4.jpg?raw=true)
 
 **My form Module**
 Shows the list of all requested and received forms
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Login Page Image](/ONGC_hospitality/Images/MF5.jpg?raw=true)
 
 
 
